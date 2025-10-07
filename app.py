@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import datetime
+import lightgbm
 
 # Load trained model and encoders
 model = joblib.load("rainfalllightgbm_model.pkl")

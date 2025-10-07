@@ -37,7 +37,7 @@ location_df = pd.DataFrame({
 })
 # Display as table inside expander
 with st.expander("📍 Location Encoding Reference (Click to Expand)", expanded=False):
-    st.dataframe(location_df.style.format({"Encoded Value": "{:d}"}), use_container_width=True)
+    st.dataframe(location_df.style.format({"Encoded Value": "{:d}"}), width='stretch')
 # Wind directions
 wind_directions = [
     "E", "ENE", "ESE", "N", "NE", "NNE", "NNW", "NW",
@@ -48,7 +48,7 @@ wind_df = pd.DataFrame({
     "Encoded Value": list(range(len(wind_directions)))
 })
 with st.expander("🧭 Wind Direction Encoding Reference (Click to Expand)", expanded=False):
-    st.dataframe(wind_df.style.format({"Encoded Value": "{:d}"}), use_container_width=True)
+    st.dataframe(wind_df.style.format({"Encoded Value": "{:d}"}), width='stretch')
 
 st.title("🌧 Rain Tomorrow Prediction App")
 st.write("Fill in today's weather details to predict if it will rain tomorrow.")
